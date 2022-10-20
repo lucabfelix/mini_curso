@@ -1,23 +1,23 @@
-{% extends  'base.html' %}
+{% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}Album Criar{% endblock %}
+{% block title %}Entrar{% endblock %}
 
 {% block content %}
-<br>
+<br><br>
 <div class="row">
     <div class="col-md-4 offset-md-4">
-        <div class="card auth-card">
+        <div class="card  auth-card">
             <div class="card-body">
-                <h4 class="card-title text-center">Criar Álbum</h4>
+                <h4 class="card-title text-center">Entrar na Minha Conta</h4>
         
-                <form method="post" enctype="multipart/form-data">
+                <form method="post">
                     {% csrf_token %}
                     <input type="hidden" name="next" value="{{ next }}">
         
                     {{ form|crispy }}
 
-                    <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                 </form>
             </div>
         </div>
